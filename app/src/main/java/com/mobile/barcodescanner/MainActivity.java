@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         rawText = rawText.replaceAll("\u0000", " ");
 
         String text = "";
-        text = text.concat("CC: " + rawText.substring(48,58));
+        text = text.concat("CC: " + rawText.substring(48,58).replaceAll("^0+", ""));
         text = text.concat("\nPRIMER APELLIDO: " + rawText.substring(58,80).trim());
         text = text.concat("\nSEGUNDO APELLIDO: " + rawText.substring(81,103).trim());
         text = text.concat("\nPRIMER NOMBRE: " + rawText.substring(104, 126).trim());
